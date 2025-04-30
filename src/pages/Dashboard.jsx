@@ -7,7 +7,7 @@ function Dashboard() {
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="flex flex-col items-center text-center">
         <motion.h1
-          className="text-3xl md:text-4xl font-bold text-blue-600 mb-6"
+          className="text-3xl md:text-4xl font-bold text-green-900 mb-6"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -18,7 +18,7 @@ function Dashboard() {
         <motion.img
           src="/logo.png"
           alt="Clinic Logo"
-          className="w-40 h-auto"
+          className="w-200 h-auto"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: 'spring', stiffness: 200 }}

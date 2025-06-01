@@ -13,11 +13,12 @@ function Login() {
     e.preventDefault();
     try {
       await login(username, password);
-      localStorage.setItem('isAuthenticated', 'true');
+      sessionStorage.setItem('isAuthenticated', 'true');
       alert('✅ ورود با موفقیت انجام شد.');
       navigate('/dashboard');
     } catch (err) {
-      setError(err.message || '❌ ورود ناموفق! لطفاً اطلاعات را چک کنید.');
+      const msg = err.response?.data?.message || err.message || '❌ ورود ناموفق!';
+      setError(msg);
     }
   };
 
@@ -34,7 +35,6 @@ function Login() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="مثلاً tarokh"
             />
           </div>
 

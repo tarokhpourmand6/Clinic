@@ -40,3 +40,45 @@
 .read-the-docs {
   color: #888;
 }
+
+/* === React Time Picker - Custom Minimal Styling === */
+.custom-time-picker {
+  width: 100%;
+  direction: ltr;
+  font-family: inherit;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.custom-time-picker input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db; /* gray-300 */
+  font-size: 0.875rem;
+  color: #111827;
+  background-color: #fff;
+  text-align: center;
+}
+
+.custom-time-picker input:focus {
+  outline: none;
+  border-color: #10b981; /* emerald-500 */
+  box-shadow: 0 0 0 1px #10b981;
+}
+
+.custom-time-picker .react-time-picker__wrapper {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.react-time-picker__clock {
+  display: none !important;
+}
+
+/* Fix overflow cut issue */
+.custom-time-picker .react-time-picker__inputGroup__input {
+  min-width: 2.5rem;
+  text-align: center;
+}
